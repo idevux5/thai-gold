@@ -1,10 +1,12 @@
-import { FastifyServerOptions } from "fastify";
-import buildApp from "./src/app";
-import CONFIG from "./src/config";
+// src/routers/price.ts
+import { FastifyInstance } from "fastify";
 
-const options: FastifyServerOptions = {
-  logger: true,
-};
+export default async function priceRoutes(fastify: FastifyInstance) {
+  fastify.get("/price", async (request, reply) => {
+    return { gold: "ราคาทองวันนี้" };
+  });
+}
+
 
 const app = buildApp(options);
 
