@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ราคาทองวันนี้</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+  #gold-price { font-size: 24px; color: #B8860B; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>ราคาทองวันนี้</h1>
+<div id="gold-price">กำลังโหลดราคาทอง...</div>
+
+<script>
+const apiKey = "4280c4035bedae106cae80a42445fd4d4280c403"; // ใส่ API ของคุณ
+const url = "https://goldpricez.com/api/rates/currency/thb/measure/gram";
+
+fetch(url, {
+    headers: { "X-API-KEY": apiKey }
+})
+.then(response => response.json())
+.then(data => {
+    document.getElementById("gold-price").innerText = "ราคาทองวันนี้: " + data.price + " บาท/กรัม";
+})
+.catch(err => {
+    console.error(err);
+    document.getElementById("gold-price").innerText = "ไม่สามารถดึงราคาทองได้";
+});
+</script>
+
+</body>
+</html>
