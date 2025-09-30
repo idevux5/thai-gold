@@ -12,9 +12,9 @@
   "author": "max180643 <max180643@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.10",
+    "cheerio": "^1.1.2",
     "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "fastify": "^3.25.2",
     "fastify-cors": "^6.0.2",
@@ -22,15 +22,15 @@
     "node-fetch": "^2.6.7"
   },
   "devDependencies": {
-    "@types/cheerio": "^0.22.30",
+    "@types/cheerio": "^1.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^18.19.128",
-    "@types/node-fetch": "2",
-    "eslint": "^8.5.0",
+    "@types/node-fetch": "^2.6.13",
+    "eslint": "^8.57.1",
     "eslint-config-airbnb-typescript-prettier": "^5.0.0",
     "nodemon": "^2.0.15",
-    "prettier": "^2.5.1",
+    "prettier": "^2.8.8",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   }
