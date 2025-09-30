@@ -1,8 +1,8 @@
-import express from 'express';
-const router = express.Router();
+// src/routers/price.ts
+import { FastifyInstance } from "fastify";
 
-router.get('/price', (req, res) => {
-  res.json({ gold: 'ราคาทองวันนี้' });
-});
-
-export default router;
+export default async function priceRoutes(fastify: FastifyInstance) {
+  fastify.get("/price", async (request, reply) => {
+    return { gold: "ราคาทองวันนี้" };
+  });
+}
